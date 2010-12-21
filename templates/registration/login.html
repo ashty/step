@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block addcss %}
+<link href="/static/css/auth_common.css" rel="stylesheet" type="text/css" media="screen" />
+{% endblock %}
+{% block content %}
+<div id="content_inner">
+  <div class="wrapper">
+    <h1>Вход</h1>
+    <form class="content_form invite_request" method="post" action="{% url django.contrib.auth.views.login %}" id="aguForm-Auth">
+      <input type="hidden" name="next" value="{{ next }}" />{% csrf_token %}
+      <dl>
+        <dd><label class="onleft">Эл. почта:</label> {{ form.username }}</dd>
+        <dd><label class="onleft">Пароль:</label> {{ form.password }}</dd>
+        <dd>{{ form.rememberme }}<label class="onright">Запомнить меня</label></dd>
+        <dd class="submit"><div class="inline-block"><input type="submit" class="aguTextButton agu-corner-all-16px" value="Войти" /></div></dd>
+      </dl>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Регистрация</h1>
+    <form method="POST">
+    {% csrf_token %}
+    <ul>
+        {{ form.as_ul }}
+        <input type="submit" class="aguTextButton agu-corner-all-16px" value="Регистрация" />
+    </ul>
+    </form>
+{% endblock %}

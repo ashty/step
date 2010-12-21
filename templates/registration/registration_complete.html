@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<p>На ваш e-mail была отправлена ссылка подтверждения.</p>
+<h1><big>{{ request.session.registration_email }}</big></h1>
+<p>Кликните по ссылке в полученном письме, чтобы активировать свою учетную запись.</p>
+<p>Если выше вы заметили ошибку во введенном адресе, просто <a href="{% url registration_register %}">повторите регистрацию</a> с правильным e-mail.</p>
+{% endblock %}
+{% block pixels %}
+<!--  AdRiver code START. Type:audit Site: agulifeL SZ: complete PZ: 0 BN: 0 -->
+<script language="javascript" type="text/javascript"><!--
+var RndNum4NoCash = Math.round(Math.random() * 1000000000);
+var ar_Tail='unknown'; if (document.referrer) ar_Tail = escape(document.referrer);
+document.write('<img src="http://ad.adriver.ru/cgi-bin/rle.cgi?' + 'sid=162057&sz=complete&bt=55&pz=0&rnd=' + RndNum4NoCash + '&tail256=' + ar_Tail + '" border=0 width=1 height=1>')
+//--></script>
+<noscript><img src="http://ad.adriver.ru/cgi-bin/rle.cgi?sid=162057&sz=complete&bt=55&pz=0&rnd=1738136147" border=0 width=1 height=1></noscript><!--  AdRiver code END  -->
+{% endblock pixels %}
