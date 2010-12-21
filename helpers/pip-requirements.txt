@@ -1,6 +1,11 @@
 django==1.2.3
 django-registration
+django-mptt>=0.4.1
+html5lib>=0.10
+BeautifulSoup
+django-authority
 
+-e git+http://github.com/batiste/django-page-cms.git@766f83236cb75b9f9194#egg=pages
 -e svn+http://typogrify.googlecode.com/svn/trunk@16#egg=typogrify
 -e hg+http://bitbucket.org/ubernostrum/django-registration@d36a38202ee3#egg=registration
 -e hg+http://bitbucket.org/zerok/django-contact-form-i18n@4a09dea296c9#egg=contact_form

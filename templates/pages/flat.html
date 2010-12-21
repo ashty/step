@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% load pages_tags %}
+
+{% block content %}{{ block.super }}
+<div class="content text">
+<h1>{% show_content current_page "title" %}</h1>
+{% placeholder fancy-content with WYMEditor %}
+</div> <!-- end content -->
+{% endblock %}

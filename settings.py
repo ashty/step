@@ -107,7 +107,27 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'typogrify',
+    'mptt',
+    'pages',
     'registration',
+    'profiles',
+    'tasks',
 )
 
 ACCOUNT_ACTIVATION_DAYS = 10
+
+AUTH_PROFILE_MODULE = "profiles.UserProfile"
+
+# Django page CMS settings
+PAGE_DEFAULT_TEMPLATE = "pages/flat.html"
+
+PAGE_TEMPLATES = (
+)
+
+PAGE_LANGUAGES = list(LANGUAGES)
+
+PAGE_DEFAULT_LANGUAGE = 'ru'
+
+# pysvn settings
+SVN_TRUNK = 'svn://localhost/test'
+
